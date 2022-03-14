@@ -17,6 +17,7 @@ body {
 
 .opt {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -47,8 +48,4 @@ h1 {
   font-size: 40px;
   font-weight: 900;
   color: #fabd2f;
-}
-
-.element {
-  margin: 0px;
 }

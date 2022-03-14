@@ -1,6 +1,5 @@
 const grid = document.querySelector('.grid');
 const createElements = document.createElement('div');
-const elements = document.querySelectorAll('.element')
 
 function createElement() {
   for (let num = 1; num <= 256; num++) {
@@ -10,3 +9,11 @@ function createElement() {
 }
 
 createElement()
+
+const elements = document.querySelectorAll('.element')
+
+elements.forEach((element) => {
+  element.addEventListener(('mouseover'), (e) => {
+    e.target.style.background = 'black'
+  })
+})
