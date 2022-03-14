@@ -1,9 +1,11 @@
 const grid = document.querySelector('.grid');
-const elements = document.createElement('div');
+const createElements = document.createElement('div');
+const elements = document.querySelectorAll('.element')
+
 function createElement() {
   for (let num = 1; num <= 256; num++) {
-    elements.classList.add('element');
-    grid.appendChild(elements.cloneNode(true));
+    createElements.classList.add('element');
+    grid.appendChild(createElements.cloneNode(true));
   }
 }
 
