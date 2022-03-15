@@ -1,27 +1,29 @@
 body {
+  background-color: #282828;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: end;
-  background-color: #282828;
-  gap: 32px;
-  padding-right: 2in;
+  align-items: center;
+  gap: 0.5in;
 }
 
 .main {
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 28px;
 }
 
 .opt {
+  align-self: flex-end;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 28px;
 }
 
-.opt > div {
+.btn {
   background-color: #8ec07c;
   font-size: 32px;
   font-weight: 500;
@@ -31,6 +33,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-color: #fabd2f;
 }
 
 .grid {
