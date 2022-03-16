@@ -39,7 +39,6 @@ body {
 .grid {
   background-color: #ebdbb2;
   display: grid;
-  grid-gap: 1px;
   grid-template-columns: repeat(16,1fr);
   height:5in;
   width: 5in;
@@ -51,4 +50,12 @@ h1 {
   font-size: 40px;
   font-weight: 900;
   color: #fabd2f;
+}
+
+.picker {
+  background-color: #8ec07c;
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;
+  border-color: #fabd2f;
 }
