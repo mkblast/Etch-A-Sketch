@@ -14,7 +14,14 @@ function createElement(num) {
   // We call this function so when we create the new canvas
   // we will be able to color it.
   colorChild()
+
+  // We call this fumction so it will let us picke a color
+  // with the color picker.
   pickColor()
+
+  // And we also call this so when we press on the clear button
+  // we clear the canvas.
+  clearCanvas()
 }
 
 // the default canvas has 256 squars (16*16).
@@ -45,7 +52,10 @@ btns.forEach((btn) => {
   })
 })
 
+// This varible is to set the default colors, it set to black by default.
 let defaulColor = '#000000'
+
+// this function is to choose a color from the color picker.
 function pickColor() {
   const picker = document.querySelector('.picker')
   picker.addEventListener('change', () => {
@@ -54,7 +64,6 @@ function pickColor() {
 }
 
 // The main function to color the squars, now is set to black.
-// more colors will be added later.
 function colorChild() {
   const elements = document.querySelectorAll('.element')
   elements.forEach((element) => {
@@ -64,3 +73,14 @@ function colorChild() {
   })
 }
 
+// A function to clear the canvas when we click on the clear button.
+function clearCanvas() {
+  const clear = document.querySelector('.clear')
+  const elements = document.querySelectorAll('.element')
+  clear.addEventListener(('click'), () => {
+    elements.forEach((element) => {
+      element.style.backgroundColor = '#ebdbb2'
+      console.log(element)
+    })
+  })
+}
