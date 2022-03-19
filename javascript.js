@@ -53,14 +53,24 @@ btns.forEach((btn) => {
 })
 
 // This varible is to set the default colors, it set to black by default.
-let defaulColor = '#000000'
+let DEFAULT_COLOR = '#000000'
 
 // this function is to choose a color from the color picker.
 function pickColor() {
   const picker = document.querySelector('.picker')
   picker.addEventListener('change', () => {
-    defaulColor = picker.value
+    DEFAULT_COLOR = picker.value
   })
+}
+
+let isMousePressed = false;
+
+document.body.onmousedown = function () {
+  isMousePressed = true
+}
+
+document.body.onmouseup = function () {
+  isMousePressed = false
 }
 
 // The main function to color the squars, now is set to black.
@@ -68,7 +78,9 @@ function colorChild() {
   const elements = document.querySelectorAll('.element')
   elements.forEach((element) => {
     element.addEventListener(('mouseover'), () => {
-      element.style.backgroundColor = defaulColor
+      if (isMousePressed) {
+        element.style.backgroundColor = DEFAULT_COLOR
+      }
     })
   })
 }
@@ -84,3 +96,4 @@ function clearCanvas() {
     })
   })
 }
+
